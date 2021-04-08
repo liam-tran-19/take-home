@@ -1,7 +1,6 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Element from "./Element";
 import MovieDetails from "./MovieDetails";
 import MovieList from "./MovieList";
 function App() {
@@ -15,7 +14,6 @@ function App() {
           <Switch>
             <Route path="/" exact component={MovieList} />
             <Route path="/details" component={MovieDetails} />
-            <Route path="/element" component={Element} />
           </Switch>
         </Router>
       </div>
