@@ -2,13 +2,13 @@ import firebase from "firebase/app";
 import "firebase/auth";
 
 const app = firebase.initializeApp({
-  apiKey: "AIzaSyAwBDQclkDnMHLu4l7v3mp1gtNSFmbfr0I",
-  authDomain: "remotenoti-406ff.firebaseapp.com",
-  databaseURL: "https://remotenoti-406ff.firebaseio.com",
-  projectId: "remotenoti-406ff",
-  storageBucket: "remotenoti-406ff.appspot.com",
-  messagingSenderId: "1030303037890",
-  appId: "1:1030303037890:web:8a8453ece75e6e6fe47e5b",
+  apiKey: "AIzaSyDGpQEPoQlNYU00er6G9MjLXeJfnXsXPwg",
+  authDomain: "test-33b10.firebaseapp.com",
+  projectId: "test-33b10",
+  storageBucket: "test-33b10.appspot.com",
+  messagingSenderId: "1021976186449",
+  appId: "1:1021976186449:web:9b11d9f8d2340806d4b270",
+  measurementId: "G-PT2YR81S63",
 });
 
 export const auth = app.auth();

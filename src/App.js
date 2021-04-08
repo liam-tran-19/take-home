@@ -1,8 +1,14 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+import Signup from "./components/Signup"
+import { Container } from "react-bootstrap"
+import { AuthProvider } from "./contexts/AuthContext"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import MovieDetails from "./MovieDetails";
-import MovieList from "./MovieList";
+import Login from "./components/Login"
+import PrivateRoute from "./components/PrivateRoute"
+import ForgotPassword from "./components/ForgotPassword"
+import UpdateProfile from "./components/UpdateProfile"
+import MovieDetails from "./pages/MovieDetails";
+import MovieList from "./pages/MovieList";
 function App() {
   return (
     <Container
@@ -11,10 +17,15 @@ function App() {
     >
       <div className="w-100" style={{ maxWidth: "400px" }}>
         <Router>
-          <Switch>
-            <Route path="/" exact component={MovieList} />
-            <Route path="/details" component={MovieDetails} />
-          </Switch>
+          <AuthProvider>
+            <Switch>
+              <PrivateRoute exact path="/" component={MovieList} />
+              <PrivateRoute path="/details" component={MovieDetails} />
+              <Route path="/signup" component={Signup} />
+              <Route path="/login" component={Login} />
+              <Route path="/forgot-password" component={ForgotPassword} />
+            </Switch>
+          </AuthProvider>
         </Router>
       </div>
     </Container>
